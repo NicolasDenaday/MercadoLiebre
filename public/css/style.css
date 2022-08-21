@@ -1,56 +1,97 @@
 /* ------Generales------ */
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.logo{
+.logo {
     width: 50%;
-}
-
-.logo{
     padding: 10px;
 }
 
-.headline{
+.up-header{
+    display: flex;
+}
+
+.up-header .logo{
+    flex-grow: 0.5;
+}
+
+.up-header .search-bar{
+    flex-grow: 0.5;
+}
+
+
+
+.headline {
     font-size: 24px;
     color: #555;
     margin: 1rem;
 }
 
-.prices{
+.price {
     font-size: 18px;
 }
 
-a{
+.discount {
+    font-size: 16px;
+    color: #3c3;
+}
+
+.descriptions {
+    font-size: 16px;
+    color: #666;
+}
+
+.discount-price {
+    display: flex;
+}
+
+.discount-price .price {
+    flex-grow: 0.3;
+}
+
+.discount-price .discount {
+    flex-grow: 0.7;
+}
+
+
+
+a {
     text-decoration: none;
     color: black;
 }
 
-li{
+li {
     font-size: 12px;
 }
+
 /* ------Generales------ */
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
 
-header{
+header {
     background-color: #EAC926;
 }
 
-.search-nav{
+.banner img{
+    width: 100%;
+}
+
+.search-nav {
     padding: 1.5rem;
 }
 
-.info{
+.info {
     text-align: center;
     padding-top: 1rem;
 }
 
-.burger-menu{
+.burger-menu {
     background-color: #1259c3;
     color: white;
     font-size: 24px;
@@ -60,22 +101,12 @@ header{
     margin: auto;
 }
 
-.burger-container{
+.burger-container {
     padding: 1rem;
 }
 
-@media (max-width: 769px){
-    .nav-list{
-        display: none;
-    }
-}
-@media (min-width: 770px){
-    .burger-container{
-        display: none;
-    }
-}
 
-main{
+main {
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -83,88 +114,99 @@ main{
     margin-right: auto;
 }
 
-.products-section{
+.products-section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    position: relative;
 }
 
 
-.product-card{
+.product-card {
     background-color: #fff;
     max-width: 30rem;
 }
 
-@media (min-width: 480px){
-    .product-card{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-}
 
-.product-card img{
+.product-card img {
     border-bottom: solid #ebebeb 0.15rem;
     width: 100%;
 }
 
-.truck-container{
-    border: #3c3 solid 0.1rem;
+.truck-container {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
     border-radius: 50%;
-    aspect-ratio: 1/1;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
-.truck-container i{
+.truck-container i {
     color: #3c3;
     font-size: 1rem;
 }
 
-.product-text{
+.product-text {
     text-align: left;
     padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
 }
 
-.discount{
-    font-size: 16px;
-    color: #3c3;
-}
 
-.descriptions{
-    font-size: 16px;
-    color: #666;
-}
-
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
     padding: 4rem;
     background-color: #fff;
+    margin-top: 3rem;
 }
 
-.footer-info{
+.footer-info {
     text-align: center;
 }
 
-.footer-info i{
+.footer-info i {
     font-size: 2em;
     color: #1456c3;
     margin-bottom: 10px;
 }
 
-footer .text, footer .copyright{
+footer .text,
+footer .copyright {
     color: #666;
-
+    
 }
 
-footer h3{
+footer h3 {
     color: #555;
 }
 
+@media (min-width: 480px) {
+    .product-card {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (max-width: 769px) {
+    .nav-list {
+        display: none;
+    }
+}
+
+@media (min-width: 770px) {
+    .burger-container {
+        display: none;
+    }
+}
