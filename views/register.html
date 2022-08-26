@@ -54,84 +54,87 @@
     <section class="banner">
         <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
-    <div class="register-info">
-        <h3><strong>Ingresá tus datos</strong></h3>
-        <div>
-            <form action="/views/register.html" method="POST">
-                <p><label for="nombre y apellido"></label>
-                    <input type="text" name="nombre y apellido" placeholder="Nombre y apellido">
-                <p><label for="nombre de usuario"></label></p>
+    <section class="register-info">
+        <form action="/views/register.html" method="POST">
+            <div>
+                <h3>Ingresá tus datos</h3>
+                <input type="text" name="nombre y apellido" placeholder="Nombre y apellido">
                 <input type="text" name="nombre de usuario" placeholder="Nombre de usuario">
-                <p><label for="email"></label></p>
                 <input type="email" name="email" placeholder="E-mail">
-        </div>
-        <h3><strong>Fecha de nacimiento</strong></h3>
-        <div>
-            <p><input type="date" name="fecha"></p>
-            <p><label for="domicilio"></label></p>
-            <input type="text" name="domicilio" placeholder="Domicilio">
-        </div>
-        <h3><strong>Perfil de usuario</strong></h3>
-        <div>
-            <input type="radio" name="perfil" value="comprador" id="comprador">
-            <label for="comprador">Comprador</label>
-            <input type="radio" name="perfil" value="vendedor" id="vendedor">
-            <label for="vendedor">Vendedor</label>
-        </div>
-        <h3><strong>Intereses</strong></h3>
-        <div>
-            <input type="checkbox" name="interest" value="electro" id="electro">
-            <label for="electro">Electro</label>
-            <br>
-            <input type="checkbox" name="interest" value="moda" id="moda">
-            <label for="moda">Moda</label>
-            <br>
-            <input type="checkbox" name="interest" value="hogar" id="hogar">
-            <label for="hogar">Hogar</label>
-            <br>
-            <input type="checkbox" name="interest" value="jugueteria" id="jugueteria">
-            <label for="jugueteria">Juguetería</label>
-            <br>
-            <input type="checkbox" name="interest" value="vida sana" id="vida sana">
-            <label for="vida sana">Vida sana</label>
-        </div>
-        <h3><strong>Avatar</strong></h3>
-        <div>
-            <labeL>ingresar avatar para el perfil:</labeL>
-            <input type="file" name="avatar" accept=".jpg">
-        </div>
-        <br>
-        <div>
-            <label for="clave">Introduzca su contraseña:</label>
-            <input type="password" name="clave">
-            <br>
-            <label for="confirmar-clave">Confirme su contraseña:</label>
-            <input type="password" name="confirmar-clave">
-        </div>
-        <div>
-            <button><a href="/views/home.html">Enviar</a></button>
-            <button type="reset">Borrar</button>
-        </div>
+            </div>
+            <div>
+                <h3>Fecha de nacimiento</h3>
+                <input type="date" name="fecha">
+                <input type="text" name="domicilio" placeholder="Domicilio">
+            </div>
+            <div>
+                <h3>Perfil de usuario</h3>
+                <div>
+                    <input type="radio" name="perfil" value="comprador" id="comprador">
+                    <label for="comprador">Comprador</label>
+                </div>
+                <div>
+                    <input type="radio" name="perfil" value="vendedor" id="vendedor">
+                    <label for="vendedor">Vendedor</label>
+                </div>
+            </div>
+            <div>
+                <h3>Intereses</h3>
+                <div>
+                    <input type="checkbox" name="interest" value="electro" id="electro">
+                    <label for="electro">Electro</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interest" value="moda" id="moda">
+                    <label for="moda">Moda</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interest" value="hogar" id="hogar">
+                    <label for="hogar">Hogar</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interest" value="jugueteria" id="jugueteria">
+                    <label for="jugueteria">Juguetería</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interest" value="vida sana" id="vida sana">
+                    <label for="vida sana">Vida sana</label>
+                </div>
+            </div>
+            <div>
+                <h3>Avatar</h3>
+                <labeL>ingresar avatar para el perfil:</labeL>
+                <input type="file" name="avatar" accept=".jpg">
+            </div>
+            <div>
+                <label for="clave">Introduzca su contraseña:</label>
+                <input type="password" name="clave" placeholder="Elegí tu contraseña">
+                <label for="confirmar-clave">Confirme su contraseña:</label>
+                <input type="password" name="confirmar-clave" placeholder="Confirmá tu contraseña">
+            </div>
+            <div class="buttons-container">
+                <input class="button" type="submit">
+                <input class="reset button" type="reset">
+            </div>
         </form>
-
-
+    </section>
 </body>
 <footer>
     <div class="footer-info">
         <i class="fas fa-credit-card"></i>
-        <h3><strong>Pagá con tarjeta o en efectivo</strong></h3>
+        <h3>Pagá con tarjeta o en efectivo</h3>
         <p class="text">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
             puntos de pago. ¡Y siempre es seguro!</p>
     </div>
     <div class="footer-info">
         <i class="fas fa-gift"></i>
-        <h3><strong>Envío gratis desde los $2.500</strong></h3>
+        <h3>Envío gratis desde los $2.500</h3>
         <p class="text">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
             productos. Es un beneficio de Mercado Puntos.</p>
     </div>
     <div class="footer-info">
         <i class="fas fa-user-shield"></i>
-        <h3><strong>Seguridad de principio a fin</strong></h3>
+        <h3>Seguridad de principio a fin</h3>
         <p class="text">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
             porque estás siempre protegid@.</p>
     </div>

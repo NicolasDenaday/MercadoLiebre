@@ -193,12 +193,18 @@ main {
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: transform 0.5s;
 }
 
 .truck-container i {
     color: #3c3;
     font-size: 1rem;
 }
+
+.product-card:hover .truck-container{
+    transform: rotate(-90deg);
+}
+
 
 .product-text {
     text-align: left;
@@ -238,6 +244,71 @@ footer .copyright {
 
 footer h3 {
     color: #555;
+}
+
+.login{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-top: 2rem;
+
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+}
+
+.login form input{
+    outline: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    border: none;
+    width: 100%;
+}
+
+
+.register-info form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.register-info form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.register-info input{
+    outline: none;
+    padding: 0.8rem;
+    border: none;
+    color: black;
+    border-radius: 0.7rem;
+}
+
+.buttons-container .button, .button{
+    background-color:#1259c3;
+    color: #fff;
+}
+
+.login-button{
+    background-color:#1259c3;
+    color: #fff;
+    transition: background-color 0.5s;
+}
+.login-button:hover{
+    background-color: #0022AA;
+}
+
+.buttons-container .reset{
+    background-color: #c30148;
 }
 
 @media (max-width: 769px) {
