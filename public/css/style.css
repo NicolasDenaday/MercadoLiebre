@@ -54,7 +54,7 @@ header {
     background-color: #EAC926;
 }
 
-.banner img{
+.banner img {
     width: 100%;
 }
 
@@ -70,28 +70,28 @@ header {
 .logo {
     width: 35%;
     padding: 10px;
-    min-width: 9rem;
+    min-width: 10rem;
     max-width: 20rem;
-    flex-grow: 0.5;
 }
 
-.search-bar{
-    flex-grow: 0.5;
+.search-bar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.search-bar input{
+.search-bar input {
     border: none;
     border-top-left-radius: 3rem;
     border-bottom-left-radius: 3rem;
     padding: 0.7rem;
     background-color: #fff;
     outline: none;
+    width: 40vw;
+    min-width: 13rem;
 }
 
-.search-bar button{
+.search-bar button {
     border: none;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
@@ -99,16 +99,16 @@ header {
     background-color: #fff;
 }
 
-.up-header{
+.up-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    width: min-content;
 }
 
 .info {
     text-align: center;
-    padding-top: 1rem;
 }
 
 .burger-menu {
@@ -125,13 +125,13 @@ header {
     padding: 1rem;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
 }
 
-.nav-list ul{
+.nav-list ul {
     display: flex;
     gap: 2rem;
 }
@@ -167,14 +167,15 @@ main {
     transition: 0.5s;
 }
 
-.product-card:hover .descriptions{
-    /* visibility: visible; */
+.product-card:hover .descriptions {
+    visibility: visible;
     opacity: 1;
 }
 
-.product-card:hover{
+/*Solo shadow-box en tablet y superior/*
+/* .product-card:hover{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
+} */
 
 
 .product-card img {
@@ -202,7 +203,7 @@ main {
     font-size: 1rem;
 }
 
-.product-card:hover .truck-container{
+.product-card:hover .truck-container {
     transform: rotate(-90deg);
 }
 
@@ -220,13 +221,19 @@ main {
 -----------------Footer------------------------
 ----------------------------------------------*/
 footer {
+    padding: 4rem;
+    margin-top: 3rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6rem;
-    padding: 4rem;
     background-color: #fff;
-    margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 
 .footer-info {
@@ -241,18 +248,20 @@ footer {
     transition: font-size 0.7s;
 }
 
-.footer-info:hover i{
+.footer-info:hover i {
     color: #3c3;
     font-size: 2.2rem;
 }
 
-footer .text, .copyright {
-    color: #666;    
+footer .text,
+.copyright {
+    color: #666;
 }
 
 footer h3 {
     color: #555;
 }
+
 /*---------------------------------------------
 -----------------Footer------------------------
 ----------------------------------------------*/
@@ -261,15 +270,17 @@ footer h3 {
 /*---------------------------------------------
 -----------------Login------------------------
 ----------------------------------------------*/
-.login{
+.login {
     display: flex;
     margin: auto;
     justify-content: center;
     padding-top: 2rem;
-
+    margin: 7rem 0;
+    flex-direction: column;
+    align-items: center;
 }
 
-.login form{
+.login form {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -278,12 +289,16 @@ footer h3 {
     align-items: center;
 }
 
-.login form input{
+.login form input {
     outline: none;
     border-radius: 0.4rem;
     padding: 0.5rem;
     border: none;
     width: 100%;
+}
+
+.login h3{
+    padding-bottom: 2rem;
 }
 /*---------------------------------------------
 -----------------Login------------------------
@@ -294,48 +309,50 @@ footer h3 {
 -----------------Register------------------------
 ----------------------------------------------*/
 
-.register-info form{
+.register-info form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
 }
 
-.register-info form > div{
+.register-info form>div {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.register-info input{
+.register-info input {
     outline: none;
     padding: 0.8rem;
     border: none;
     color: black;
     border-radius: 0.7rem;
 }
+
 /*---------------------------------------------
 -----------------Register------------------------
 ----------------------------------------------*/
 
 
-.buttons-container .button{
-    background-color:#1259c3;
+.buttons-container .button {
+    background-color: #1259c3;
     color: #fff;
     cursor: pointer;
 }
 
-.login-button{
-    background-color:#1259c3;
+.login-button {
+    background-color: #1259c3;
     color: #fff;
     transition: background-color 0.5s;
     cursor: pointer
 }
-.login-button:hover{
+
+.login-button:hover {
     background-color: #0022AA;
 }
 
-.buttons-container .reset{
+.buttons-container .reset {
     background-color: #c30148;
 }
 
@@ -347,30 +364,45 @@ footer h3 {
     .nav-list {
         display: none;
     }
+
 }
 
 @media (min-width: 770px) {
     .burger-container {
         display: none;
     }
+
+    .product-card {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
 }
 
-@media (max-width: 600px){
-    .product-card{
+@media (max-width: 600px) {
+    .product-card {
         width: 90%;
+    }
+
+    .descriptions {
+        opacity: 0;
     }
 }
 
-@media (min-width: 992px){
-    .product-card{
+@media (min-width: 992px) {
+    .product-card {
         max-width: 20%;
     }
 
-footer{
-    flex-direction: row;
-}
+    .footer-container {
+        flex-direction: row;
+    }
 }
 
+@media (max-width: 405px){
+    .up-header{
+        flex-wrap: wrap;
+    }
+}
 /*---------------------------------------------
 -----------------Media------------------------
 ----------------------------------------------*/

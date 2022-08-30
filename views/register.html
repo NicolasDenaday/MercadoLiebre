@@ -55,26 +55,26 @@
         <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
     <section class="register-info">
-        <form action="/views/register.html" method="post">
+        <form action="/" method="get">
             <div>
                 <h3>Ingresá tus datos</h3>
-                <input type="text" name="nombre y apellido" placeholder="Nombre y apellido">
-                <input type="text" name="nombre de usuario" placeholder="Nombre de usuario">
-                <input type="email" name="email" placeholder="E-mail">
+                <input minlength="3" type="text" name="nombre y apellido" placeholder="Nombre y apellido" required>
+                <input minlength="4" type="text" name="nombre de usuario" placeholder="Nombre de usuario" required>
+                <input type="email" name="email" placeholder="E-mail" required>
             </div>
             <div>
                 <h3>Fecha de nacimiento</h3>
-                <input type="date" name="fecha">
-                <input type="text" name="domicilio" placeholder="Domicilio">
+                <input type="date" name="fecha" required>
+                <input type="text" name="domicilio" placeholder="Domicilio" required>
             </div>
             <div>
                 <h3>Perfil de usuario</h3>
                 <div>
-                    <input type="radio" name="perfil" value="comprador" id="comprador">
+                    <input type="radio" name="perfil" value="comprador" id="comprador" required>
                     <label for="comprador">Comprador</label>
                 </div>
                 <div>
-                    <input type="radio" name="perfil" value="vendedor" id="vendedor">
+                    <input type="radio" name="perfil" value="vendedor" id="vendedor" required>
                     <label for="vendedor">Vendedor</label>
                 </div>
             </div>
@@ -108,37 +108,39 @@
             </div>
             <div>
                 <label for="clave">Introduzca su contraseña:</label>
-                <input type="password" name="clave" placeholder="Elegí tu contraseña">
+                <input type="password" name="clave" placeholder="Elegí tu contraseña" required>
                 <label for="confirmar-clave">Confirme su contraseña:</label>
-                <input type="password" name="confirmar-clave" placeholder="Confirmá tu contraseña">
+                <input type="password" name="confirmar-clave" placeholder="Confirmá tu contraseña" required>
             </div>
             <div class="buttons-container">
-            <input class="button" type="submit"><a href="/views/home.html"></a>
-            <input class="reset button" type="reset">
+                <input class="button" type="submit"><a href="/views/home.html"></a>
+                <input class="reset button" type="reset">
             </div>
         </form>
     </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <i class="fas fa-credit-card"></i>
+                <h3><strong>Pagá con tarjeta o en efectivo</strong></h3>
+                <p class="text">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!</p>
+            </div>
+            <div class="footer-info">
+                <i class="fas fa-gift"></i>
+                <h3><strong>Envío gratis desde los $2.500</strong></h3>
+                <p class="text">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.</p>
+            </div>
+            <div class="footer-info">
+                <i class="fas fa-user-shield"></i>
+                <h3><strong>Seguridad de principio a fin</strong></h3>
+                <p class="text">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.</p>
+            </div>
+        </div>
+        <p class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+    </footer>
 </body>
-<footer>
-    <div class="footer-info">
-        <i class="fas fa-credit-card"></i>
-        <h3>Pagá con tarjeta o en efectivo</h3>
-        <p class="text">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-            puntos de pago. ¡Y siempre es seguro!</p>
-    </div>
-    <div class="footer-info">
-        <i class="fas fa-gift"></i>
-        <h3>Envío gratis desde los $2.500</h3>
-        <p class="text">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-            productos. Es un beneficio de Mercado Puntos.</p>
-    </div>
-    <div class="footer-info">
-        <i class="fas fa-user-shield"></i>
-        <h3>Seguridad de principio a fin</h3>
-        <p class="text">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-            porque estás siempre protegid@.</p>
-    </div>
-    <p class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
-</footer>
 
 </html>
